@@ -1,108 +1,154 @@
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinner at 8Cuts</title>
 
-  body {
-    background: linear-gradient(135deg, #2b0f14, #5a1f2b);
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  .card {
-    background: linear-gradient(180deg, #3a0f1e, #1b0a10);
-    border-radius: 26px;
-    padding: 38px 32px;
-    max-width: 420px;
-    width: 100%;
-    box-shadow: 0 30px 60px rgba(230, 57, 70, 0.25);
-    text-align: center;
-    animation: fadeUp 0.8s ease;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    body {
+      background: linear-gradient(135deg, #2b0f14, #5a1f2b);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-  }
 
-  .badge {
-    background: linear-gradient(135deg, #ff758f, #e63946);
-    display: inline-block;
-    padding: 7px 16px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    margin-bottom: 18px;
-    letter-spacing: 0.5px;
-  }
+    .card {
+      background: linear-gradient(180deg, #3a0f1e, #1b0a10);
+      border-radius: 26px;
+      padding: 38px 32px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 30px 60px rgba(230, 57, 70, 0.25);
+      text-align: center;
+      animation: fadeUp 0.8s ease;
+    }
 
-  h1 {
-    font-size: 1.9rem;
-    margin-bottom: 8px;
-  }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.95;
-  }
+    .badge {
+      background: linear-gradient(135deg, #ff758f, #e63946);
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
 
-  .details {
-    margin: 26px 0;
-    text-align: left;
-  }
-
-  .details div {
-    margin-bottom: 14px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px dashed rgba(255,255,255,0.25);
-    padding-bottom: 8px;
-  }
-
-  .details span {
-    font-weight: 500;
-  }
-
-  .cta {
-    margin-top: 30px;
-  }
-
-  .cta a {
-    display: block;
-    background: linear-gradient(135deg, #ff758f, #e63946);
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 14px;
-    font-weight: 600;
-    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .cta a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(230, 57, 70, 0.55);
-  }
-
-  @media (max-width: 480px) {
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.9rem;
+      margin-bottom: 8px;
     }
+
     p {
-      font-size: 0.95rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.95;
     }
-  }
-</style>
+
+    .details {
+      margin: 26px 0;
+      text-align: left;
+    }
+
+    .details div {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(255,255,255,0.25);
+      padding-bottom: 8px;
+    }
+
+    .details span {
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 30px;
+    }
+
+    .cta a {
+      display: block;
+      background: linear-gradient(135deg, #ff758f, #e63946);
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(230, 57, 70, 0.55);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="badge">Dinner Invitation ✨</div>
+
+    <h1>Dinner at 8Cuts 🍔</h1>
+
+    <p style="margin-top:10px; font-size:1.05rem;">
+      An evening invite just for
+    </p>
+
+    <p style="margin-top:6px; font-weight:600; font-size:1.15rem;">
+      Bree Janine 💖
+    </p>
+
+    <div class="details">
+      <div>
+        <span>Date</span>
+        <span>February 28</span>
+      </div>
+      <div>
+        <span>Time</span>
+        <span>5:00 PM</span>
+      </div>
+      <div>
+        <span>Place</span>
+        <span>8Cuts Burgers – Ortigas (SM Megamall)</span>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="#">See you there ❤️</a>
+    </div>
+  </div>
+</body>
+</html>
