@@ -16,8 +16,8 @@
     }
 
     body {
-      background: linear-gradient(135deg, #2b0f14, #5a1f2b);
-      color: #fff;
+      background: linear-gradient(135deg, #ffcad4, #f06292);
+      color: #330000;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -26,12 +26,12 @@
     }
 
     .card {
-      background: linear-gradient(180deg, #3a0f1e, #1b0a10);
+      background: linear-gradient(180deg, #fff0f5, #ffc1d1);
       border-radius: 26px;
-      padding: 38px 32px;
+      padding: 36px 32px;
       max-width: 420px;
       width: 100%;
-      box-shadow: 0 30px 60px rgba(230, 57, 70, 0.25);
+      box-shadow: 0 20px 50px rgba(230, 57, 70, 0.3);
       text-align: center;
       animation: fadeUp 0.8s ease;
     }
@@ -55,6 +55,7 @@
       font-size: 0.8rem;
       margin-bottom: 18px;
       letter-spacing: 0.5px;
+      color: #fff;
     }
 
     h1 {
@@ -71,17 +72,19 @@
     .details {
       margin: 26px 0;
       text-align: left;
+      border-top: 1px dashed rgba(0,0,0,0.15);
+      padding-top: 12px;
     }
 
     .details div {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px dashed rgba(255,255,255,0.25);
+      border-bottom: 1px dashed rgba(0,0,0,0.1);
       padding-bottom: 8px;
     }
 
-    .details span {
+    .details span:first-child {
       font-weight: 500;
     }
 
@@ -112,6 +115,13 @@
       }
       p {
         font-size: 0.95rem;
+      }
+      .details div {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .details span:last-child {
+        margin-top: 4px;
       }
     }
   </style>
@@ -147,7 +157,7 @@
     </div>
 
     <div class="cta">
-      <a href="#">See you there ❤️</a>
+      <a href="https://imgur.com/gallery/little-heart-5NdQOOi" target="_blank">See you there ❤️</a>
     </div>
   </div>
 </body>
