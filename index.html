@@ -1,170 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dinner at 8Cuts</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dinner at 8Cuts</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  body {
+    background: linear-gradient(135deg, #ffcad4, #f06292);
+    color: #330000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+  .card {
+    background: linear-gradient(180deg, #fff0f5, #ffc1d1);
+    border-radius: 26px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(230, 57, 70, 0.3);
+    text-align: center;
+    animation: fadeUp 0.8s ease;
+  }
 
-    body {
-      background: linear-gradient(135deg, #ffcad4, #f06292);
-      color: #330000;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
+  .badge {
+    background: linear-gradient(135deg, #ff758f, #e63946);
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  .details {
+    margin: 26px 0;
+    text-align: left;
+    border-top: 1px dashed rgba(0,0,0,0.15);
+    padding-top: 12px;
+  }
+
+  .details div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    padding: 8px 0;
+    word-wrap: break-word;
+  }
+
+  .details span:first-child {
+    font-weight: 500;
+  }
+
+  .details span:last-child {
+    max-width: 60%;
+    text-align: right;
+    word-wrap: break-word;
+  }
+
+  .cta {
+    margin-top: 30px;
+  }
+
+  .cta a {
+    display: block;
+    background: linear-gradient(135deg, #ff758f, #e63946);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 14px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(230, 57, 70, 0.55);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
     .card {
-      background: linear-gradient(180deg, #fff0f5, #ffc1d1);
-      border-radius: 26px;
-      padding: 36px 32px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 20px 50px rgba(230, 57, 70, 0.3);
-      text-align: center;
-      animation: fadeUp 0.8s ease;
-    }
-
-    .details span:last-child {
-  text-align: right;
-  max-width: 60%;
-  word-wrap: break-word;
-}
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .badge {
-      background: linear-gradient(135deg, #ff758f, #e63946);
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      margin-bottom: 18px;
-      letter-spacing: 0.5px;
-      color: #fff;
+      padding: 28px 20px;
     }
 
     h1 {
-      font-size: 1.9rem;
-      margin-bottom: 8px;
+      font-size: 1.6rem;
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
-
-    .details {
-      margin: 26px 0;
-      text-align: left;
-      border-top: 1px dashed rgba(0,0,0,0.15);
-      padding-top: 12px;
+      font-size: 0.95rem;
     }
 
     .details div {
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dashed rgba(0,0,0,0.1);
-      padding-bottom: 8px;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    .details span:first-child {
-      font-weight: 500;
+    .details span:last-child {
+      text-align: left;
+      margin-top: 4px;
+      max-width: 100%;
     }
-
-    .cta {
-      margin-top: 30px;
-    }
-
-    .cta a {
-      display: block;
-      background: linear-gradient(135deg, #ff758f, #e63946);
-      color: #fff;
-      text-decoration: none;
-      padding: 15px;
-      border-radius: 14px;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .cta a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(230, 57, 70, 0.55);
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
-      .details div {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .details span:last-child {
-        margin-top: 4px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
-  <div class="card">
-    <div class="badge">Dinner Invitation ✨</div>
+<div class="card">
+  <div class="badge">Dinner Invitation ✨</div>
 
-    <h1>Dinner at 8Cuts 🍔</h1>
+  <h1>Dinner at 8Cuts 🍔</h1>
+  <p style="margin-top:10px; font-size:1.05rem;">An evening invite just for</p>
+  <p style="margin-top:6px; font-weight:600; font-size:1.15rem;">Bree Janine 💖</p>
 
-    <p style="margin-top:10px; font-size:1.05rem;">
-      Date invitation for
-    </p>
-
-    <p style="margin-top:6px; font-weight:600; font-size:1.15rem;">
-      Bree Janine 💖
-    </p>
-
-    <div class="details">
-      <div>
-        <span>Date</span>
-        <span>February 28</span>
-      </div>
-      <div>
-        <span>Time</span>
-        <span>5:00 PM</span>
-      </div>
-      <div>
-        <span>Place</span>
-        <span>8Cuts Burgers – Ortigas (SM Megamall)</span>
-      </div>
+  <div class="details">
+    <div>
+      <span>Date</span>
+      <span>February 28</span>
     </div>
-
-    <div class="cta">
-      <a href="https://imgur.com/gallery/little-heart-5NdQOOi" target="_blank">See you there ❤️</a>
+    <div>
+      <span>Time</span>
+      <span>5:00 PM</span>
+    </div>
+    <div>
+      <span>Place</span>
+      <span>8Cuts Burgers – Ortigas (SM Megamall)</span>
     </div>
   </div>
+
+  <div class="cta">
+    <a href="https://imgur.com/gallery/little-heart-5NdQOOi" target="_blank">See you there ❤️</a>
+  </div>
+</div>
 </body>
 </html>
